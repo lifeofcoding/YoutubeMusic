@@ -1,0 +1,56 @@
+{
+  "name": "YoutubePlayer",
+  "version": "1.0.3",
+  "description": "Elegant YouTube Music desktop app",
+  "main": "src/index.js",
+  "repository": "https://github.com/lifeofcoding/YoutubeMusic",
+  "scripts": {
+    "start": "electron src/index.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -mwl"
+  },
+  "build": {
+    "appId": "engineer.filip.playme",
+    "productName": "PlayMe",
+    "copyright": "Copyright © 2018 Luchianenco Filip",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "music"
+    },
+    "linux": {
+      "category": "AudioVideo",
+      "target": [
+        "AppImage"
+      ]
+    },
+    "win": {
+      "target": "NSIS"
+    }
+  },
+  "postinstall": "electron-builder install-app-deps",
+  "author": "Filip Luchianenco",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.3",
+    "electron-builder": "^20.19.2",
+    "electron-is-dev": "^0.3.0"
+  },
+  "dependencies": {
+    "bloom-filter-cpp": "^1.2.0",
+    "electron-ad-blocker": "^0.2.0",
+    "electron-window-state": "^4.1.1",
+    "hashset-cpp": "^2.1.0",
+    "jquery": "^3.3.1",
+    "youtube-audio-server": "^2.1.4"
+  },
+  "keywords": [
+    "music",
+    "player",
+    "electron",
+    "desktop",
+    "youtube"
+  ]
+}
